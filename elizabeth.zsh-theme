@@ -2,10 +2,10 @@ if [ $UID -eq 0 ]; then CARETCOLOR="red"; else CARETCOLOR="white"; fi
 
 local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 
-if [[ -n $SSH_CONNECTION ]]; then
+if [[ -n $GITPOD_HOST ]]; then
+  USERINFO="%{${fg[green]}%}%n%{$reset_color%}%{${fg[cyan]}%}@$(jq -r --jsonargs .checkoutLocation <<< $GITPOD_WORKSPACE_CONTEXT )%{$reset_color%}"
+elif [[ -n $SSH_CONNECTION ]]; then
   USERINFO="%{${fg[green]}%}%n%{$reset_color%}%{${fg[yellow]}%}@%m%{$reset_color%}"
-elif [[ -n $GITPOD_HOST ]]; then
-  USERINFO="%{${fg[green]}%}%n%{$reset_color%}@$(jq -r --jsonargs .checkoutLocation <<< $GITPOD_WORKSPACE_CONTEXT )"
 else
   USERINFO="%{${fg[green]}%}%n%{$reset_color%}@%m"
 fi
