@@ -9,7 +9,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 sudo chsh -s $(which zsh) $(whoami)
 
 # Zsh theme
-cp ./elizabeth.zsh-theme $HOME/.oh-my-zsh/custom/themes/elizabeth.zsh-theme
+cp $HOME/dotfiles/elizabeth.zsh-theme $HOME/.oh-my-zsh/custom/themes/elizabeth.zsh-theme
 ## curl -fsSLo $HOME/.oh-my-zsh/custom/themes/elizabeth.zsh-theme https://raw.github.com/elizabeth-dev/dotfiles/main/elizabeth.zsh-theme
 
 # Zsh autosuggestions
@@ -17,7 +17,7 @@ echo 'deb http://download.opensuse.org/repositories/shells:/zsh-users:/zsh-autos
 curl -fsSL https://download.opensuse.org/repositories/shells:zsh-users:zsh-autosuggestions/xUbuntu_20.04/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/shells_zsh-users_zsh-autosuggestions.gpg > /dev/null
 
 # Zshrc
-cp ./.zshrc ~/.zshrc
+cp $HOME/.dotfiles/.zshrc ~/.zshrc
 
 # Install packages
 sudo apt-get update && sudo apt-get install zsh-syntax-highlighting zsh-autosuggestions
