@@ -9,7 +9,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 sudo chsh -s $(which zsh) $(whoami)
 
 # Zsh theme
-cp $HOME/dotfiles/elizabeth.zsh-theme $HOME/.oh-my-zsh/custom/themes/elizabeth.zsh-theme
+cp $HOME/.dotfiles/elizabeth.zsh-theme $HOME/.oh-my-zsh/custom/themes/elizabeth.zsh-theme
 ## curl -fsSLo $HOME/.oh-my-zsh/custom/themes/elizabeth.zsh-theme https://raw.github.com/elizabeth-dev/dotfiles/main/elizabeth.zsh-theme
 
 # Zsh autosuggestions
