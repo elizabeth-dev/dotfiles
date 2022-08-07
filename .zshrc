@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/Android/Sdk/platform-tools:$HOME/Android/Sdk/tools/bin:$HOME/Android/Sdk/tools:$PATH
+## export PATH=$HOME/Android/Sdk/platform-tools:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -82,3 +82,6 @@ source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Zsh autosuggestions
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# RVM required by gitpod
+export PATH=$HOME/.rvm/bin:$PATH
