@@ -86,6 +86,13 @@ source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # RVM required by gitpod
 export PATH=$HOME/.rvm/bin:$PATH
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+
 # SDKMAN required by gitpod
 export SDKMAN_DIR=$HOME/.sdkman
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# Go settings required by Gitpod
+export GOPATH=/workspace/go
+export PATH=$GOPATH/bin:$PATH
