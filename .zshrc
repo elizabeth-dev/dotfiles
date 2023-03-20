@@ -96,3 +96,15 @@ export SDKMAN_DIR=$HOME/.sdkman
 # Go settings required by Gitpod
 export GOPATH=/workspace/go
 export PATH=$GOPATH/bin:$PATH
+
+# Rust settings required by Gitpod
+export CARGO_HOME=/workspace/.cargo
+mkdir -m 0755 -p "$CARGO_HOME/bin" 2>/dev/null
+export PATH=$CARGO_HOME/bin:$PATH
+test ! -e "$CARGO_HOME/bin/rustup" && mv "$(command -v rustup)" "$CARGO_HOME/bin"
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+
